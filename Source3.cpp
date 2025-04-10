@@ -113,6 +113,8 @@ void CalculateDensityValues(int min_pos_mm, int max_pos_mm, int* mean_density,
 	int* min_density, int* median_density) {
 	unique_lock<mutex> lock(mtx);
 
+	cv.wait(lock, [] {return dataDensityReady && dataPositionReady;});
+	
 	vector<Data> totalData = dataStructure.getData(); // Gives me the data vector array we populated
 	vector<int> values; // Vector that will be filled with all density values between min_pos_mm and max_pos_mm
 
