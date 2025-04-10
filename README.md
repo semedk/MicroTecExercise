@@ -4,9 +4,9 @@ Created Github to make edits if required, apologies for the multiple emails. I m
 
 Changes:
 1. Added mutex and condition variable to achieve thread safety
-2. Changed implementation of data structure so I wouldn't just run out of memory due to amount of insertions
---> Attempted a ciruclar buffer approach that replaced unneeded values
---> Created a new class in order to do so
+2. Changed implementation of data structure so I wouldn't just run out of memory due to amount of insertions <br/>
+--> Attempted a ciruclar buffer approach that replaced unneeded values <br/>
+--> Created a new class in order to do so <br/>
 3. Switched back and forth in regards to choosing to clear data (like a typical circular buffer) or to keep old values, ran into two problems...<br/>
 --> Old values were relevant and important at times to establish the 5 second mark so they couldn't be cleared <br/>
 --> Some old values were also not relevant and important to clear to make sure unneeded information wasn't put into the 5 second mark <br/>
