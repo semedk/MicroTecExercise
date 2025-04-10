@@ -55,13 +55,12 @@ public:
 			}
 		}
 		*/
+		data.push_back(info); // If we can't reuse, we'll just push
 
 		// Remove spots in array that don't fit 5 second range
 		data.erase(remove_if(data.begin(), data.end(), [minTime](const Data& d) {
 				return d.timeUs < minTime;
 		}), data.end());
-
-		data.push_back(info); // If we can't reuse, we'll just push
 
 	}
 
